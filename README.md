@@ -9,7 +9,7 @@ Basically that's all. This very simple code is working fine on a esp8266. You ca
 
 we'll use the esp8266/esp32 SoftwareSerial Library to communicate with the MAX3485
 
-No WiFi connectivity is shown, just some output to the serial port, but you can also very easily adapt everything for your needs.
+No WiFi connectivity is shown, just some output to the serial port, but you can also very easily adapt everything for your needs. In the sample shown, it will read the 8 temperature sensors and output the Temperatures to serial console.
 
 The wiring is simple: In case of the esp8266:
 - D1    --> MAX3485 Pin 1
