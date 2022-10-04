@@ -12,11 +12,11 @@ we'll use the esp8266/esp32 SoftwareSerial Library to communicate with the MAX34
 No WiFi connectivity is shown, just some output to the serial port, but you can also very easily adapt everything for your needs.
 
 The wiring is simple: In case of the esp8266:
-D1    --> MAX3485 Pin 1
-D0    --> MAX3485 Pin 2&3
-D2    --> MAX3485 Pin 4
-GND   --> MAX3485 Pin 5
-3.3V  --> MAX3485 Pin 8
-Pin6&7 Is the RS485 +/- which connect to the geco controller. Make sure you add a 120 Ohm termination resistor between Pin 6&7 of the MAX3485.
+- D1    --> MAX3485 Pin 1
+- D0    --> MAX3485 Pin 2&3
+- D2    --> MAX3485 Pin 4
+- GND   --> MAX3485 Pin 5
+- 3.3V  --> MAX3485 Pin 8
+- Pin6&7 Is the RS485 +/- which connect to the geco controller. Make sure you add a 120 Ohm termination resistor between Pin 6&7 of the MAX3485.
 
 Upload the Code and Enjoy! :)
