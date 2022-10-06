@@ -12,14 +12,16 @@ void setup() {
 
 void loop() {
   char messageread[1000];
+  int pos = 0;
   byte message[] = { 0x69, 0x02, 0x01, 0x84, 0x00, 0x00, 0x0C, 0xF6, 0x02, 0x00, 0x01, 0x00, 0x40, 0x80, 0x00, 0x32, 0x64, 0x00, 0xBD, 0xB2 };
 
   digitalWrite(D0, HIGH);
-  RS485Serial.write(message, sizeof(message));
+  RS485Serial.write(message, 20);
 
   digitalWrite(D0, LOW);
-  if(RS485Serial.available() > 0){
-    RS485Serial.readBytes(messageread, 200);
+  while(RS485Serial.available() > 0){
+    messageread[pos] = RS485Serial.read();
+    pos++;
   }
 
   if (messageread[0] == 0x69) {
@@ -98,7 +100,7 @@ void loop() {
      }
     }
 
-  for(int i=0; i<=sizeof(Temp); i++){
+  for(int i=0; i<8); i++){
    Serial.print("Temperature");
    Serial.print(i);
    Serial.print("= ");
